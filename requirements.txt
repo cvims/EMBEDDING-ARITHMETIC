@@ -1,0 +1,10 @@
+torch
+numpy
+tqdm
+matplotlib
+transformers
+huggingface_hub
+diffusers
+sentencepiece
+protobuf
+accelerate
