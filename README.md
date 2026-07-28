@@ -11,13 +11,14 @@ This repository contains the official code for the ICPR 2026 paper "Embedding Ar
 - Easily extensible to new attributes and professions
 
 ## Setup
-1. Install dependencies:
+1. Requires Python 3.12 (developed and tested on 3.12.11).
+2. Install dependencies:
 	```bash
 	pip install -r requirements.txt --extra-index-url https://download.pytorch.org/whl/cu124
 	```
-2. (Recommended) The code needs to be run on a GPU machine with atleast 40GB VRAM to hold the FLUX model.
-3. Provide a HuggingFace access token with access to `black-forest-labs/FLUX.1-dev` (accept the model's gated license on HuggingFace first), either via the `HF_TOKEN` environment variable or the `--hf_token` flag accepted by every script below. Never commit a token to the repository.
-4. For `test_local_linearity.py`, download the FairFace checkpoint `res34_fair_align_multi_7_20190809.pt` from [this folder](https://drive.google.com/drive/folders/1yUYaE5aRgNKCI5PuzeUAr0NWiS4_Rakc?usp=sharing) and point `--fairface_weights` (or the `FAIRFACE_WEIGHTS` env var) at it.
+3. (Recommended) The code needs to be run on a GPU machine with atleast 40GB VRAM to hold the FLUX model.
+4. Provide a HuggingFace access token with access to `black-forest-labs/FLUX.1-dev` (accept the model's gated license on HuggingFace first), either via the `HF_TOKEN` environment variable or the `--hf_token` flag accepted by every script below. Never commit a token to the repository.
+5. For `test_local_linearity.py`, download the FairFace checkpoint `res34_fair_align_multi_7_20190809.pt` from [this folder](https://drive.google.com/drive/folders/1yUYaE5aRgNKCI5PuzeUAr0NWiS4_Rakc?usp=sharing) and point `--fairface_weights` (or the `FAIRFACE_WEIGHTS` env var) at it.
 
 ## Usage
 `embedding_arithmetic.ipynb` demonstrates the core idea: computing semantic attribute vectors for professions, race, and gender, and adding them to prompt embeddings to generate images with diverse demography.
