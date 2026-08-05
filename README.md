@@ -71,3 +71,19 @@ python test_embedding_arithmetic.py --queue gender --output_dir ./results/genera
 - `flux_custom.py`: Custom pipeline for FLUX diffusion model
 - `VLMAdapter.py`: Adapter modules for text encoders
 - `requirements.txt`: Python dependencies
+
+## If you are using our Framework for your research, please consider citing it
+
+```
+@InProceedings{10.1007/978-3-032-31673-8_21,
+author="Thirugnana Sambandham, Venkatesh
+and Sch{\"o}n, Torsten",
+title="Embedding Arithmetic: A Lightweight, Tuning-Free Framework for Post-Hoc Bias Mitigation in Text-to-Image Models",
+booktitle="Pattern Recognition",
+year="2027",
+publisher="Springer Nature Switzerland",
+address="Cham",
+pages="308--323",
+isbn="978-3-032-31673-8"
+}
+```
